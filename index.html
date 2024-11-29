@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        
+  
+    .nav-tabs .nav-link {
+      border-radius: 15px; 
+    }
+
+    .nav-tabs .nav-link.active {
+      background-color: black; 
+      color: white !important; 
+    }
+
+    .nav-tabs .nav-link {
+      color: #000; 
+    }
+    .fade {
+      opacity: 0;
+      transition: opacity 0.6s ease-out;
+    }
+    .fade.active {
+      opacity: 1;
+    }
+    .hidden {
+      display: none;
+    }
+    .box-container {
+      position: relative;
+    
+    }
+    .box-container .box {
+      position: absolute;
+      top: 0;
+      left: 0;
+     
+    }
+    </style>
+</head>
+<body>
+    <div class="w-100">
+        <div class="row  bg-dark">
+          <div class="col p-0">
+           <div class="w-100" style="height: auto;">
+              <nav class="w-100" id="navbar1" style=" box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+                    <div class="container d-flex align-items-center gap-2" >
+                        <div class="w-100 d-flex align-items-center gap-2 " >
+                            <a href="" class="text-decoration-none fs-4 text-white">tickerTape</a>
+                             <div class="w-100 p-1 d-flex align-items-center justify-content-between gap-2" style="height: 45px; border-radius: 15px;   background-color: #2b2b2b;">
+                                <span><i class="fa-solid fa-magnifying-glass text-white"></i></span>
+                                <input class="w-100" type="text" name="" id=""  placeholder="Search Stocks, Mutual funds, Smallcases, ETS, Etz..">
+                                <button type="button" class="btn bg-dark" class="p-1 "><i class="fa-solid fa-slash text-white"></i></button>
+                             </div>
+                        </div>
+                        <div class="w-100 ul">
+                            <li><a href="" class="text-white fs-6"><i class="fa-solid fa-briefcase"></i> Portfolio</a></li>
+                            <li><a href="" class="text-white fs-6"><i class="fa-solid fa-ring"></i> Gold</a></li>
+                            <li><a href="" class="text-white fs-6"><i class="fa-brands fa-screenpal"></i> Screener</a></li>
+                            <li><a href="" class="text-white fs-6" id="more"><i class="fa-solid fa-sliders"></i> More <i class="fa-solid fa-caret-down"></i></a></li>
+                            <li><a href=""><button type="button" class="btn bg-white"><i class="fa-solid fa-lock"></i> Login <i class="fa-solid fa-caret-down"></i></button></li>
+
+                                <div class="w-50 rounded-2 p-1 bg-dark" id="more_menu" >
+                                    <div class="w-100 p-1">
+                                        <span class="text-secondary">Products</span>
+                                         <hr class="bg-secondary">
+                                         <div class="w-100 d-flex justify-content-between p-1">
+                                            <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                <img src="https://assets.tickertape.in/nav-logos/assets/stock.svg" alt="" width="40" height="40">
+                                                <span class="text-white fs-6">Stocks</span>
+                                            </div>
+                                           <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                <img src="https://assets.tickertape.in/nav-logos/assets/etf.svg" alt="" width="40" height="40">
+                                                <span class="text-white fs-6">ETs</span>
+                                            </div>
+                                              <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                <img src="https://assets.tickertape.in/nav-logos/assets/mutualfund.svg" alt="" width="40" height="40">
+                                                <span class="text-white fs-6">MFs</span>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                <img src="https://assets.tickertape.in/nav-logos/assets/smallcase.svg" alt=""  width="40" height="40">
+                                                <span class="text-white fs-6">Smallcases</span>
+                                            </div>
+                                         </div>
+                                         <div class="w-100  d-flex flex-wrap gap-5 p-1">
+                                            <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                <img src="https://assets.tickertape.in/nav-logos/assets/digital-gold.svg" alt=""  width="40" height="40">
+                                                <span class="text-white fs-6">Gold</span>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                <img src="https://assets.tickertape.in/nav-logos/finance/lamf.svg" alt=""  width="40" height="40">
+                                                <span class="text-white text-center fs-6">Loan Aganist <br> MFs</span>
+                                            </div>
+                                         </div>
+                                    </div>
+                                    <div class="w-100 p-1" >
+                                        <div class="w-100 p-1" >
+                                            <span class="text-secondary">Tools of the Trade</span>
+                                             <hr class="bg-secondary">
+                                             <div class="w-100 d-flex justify-content-between p-1">
+                                                <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                    <img src=" https://assets.tickertape.in/nav-logos/tools_of_the_trade/stock_screener.svg" alt="" width="40" height="40">
+                                                    <span class="text-white fs-6">Stocks</span>
+                                                </div>
+                                               <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                    <img src="https://assets.tickertape.in/nav-logos/tools_of_the_trade/mf_screener.svg" alt="" width="40" height="40">
+                                                    <span class="text-white text-center fs-6">MFs <br>Screener</span>
+                                                </div>
+                                                  <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                    <img src="https://assets.tickertape.in/nav-logos/tools_of_the_trade/market_movers.svg" alt="" width="40" height="40">
+                                                    <span class="text-white text-center fs-6">Market <br> Movers</span>
+                                                </div>
+                                                <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                    <img src="https://assets.tickertape.in/nav-logos/tools_of_the_trade/MMI_Fear.svg" alt=""  width="40" height="40">
+                                                    <span class="text-white text-center fs-6">Market <br> Mood</span>
+                                                </div>
+                                             </div>
+                                             <div class="w-100  d-flex justify-content-between p-1">
+                                                <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                    <img src="https://assets.tickertape.in/nav-logos/profile/portfolio.svg" alt=""  width="40" height="40">
+                                                    <span class="text-white fs-6">Portfolio</span>
+                                                </div>
+                                                <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                    <img src="https://assets.tickertape.in/nav-logos/profile/watchlist.svg" alt=""  width="40" height="40">
+                                                    <span class="text-white text-center fs-6">watchlist</span>
+                                                </div>
+                                                <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                    <img src="https://assets.tickertape.in/nav-logos/profile/alerts.svg" alt=""  width="40" height="40">
+                                                    <span class="text-white text-center fs-6">Alerts</span>
+                                                </div>
+                                                <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                    <img src="https://assets.tickertape.in/nav-logos/tools_of_the_trade/news_events.svg" alt=""  width="40" height="40">
+                                                    <span class="text-white text-center fs-6">News and <br> Events</span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        
+                                    </div>
+                                    <div class="w-100 p-1" >
+                                        <div class="w-100 p-1" >
+                                            <span class="text-secondary">Read and Shares</span>
+                                             <hr class="bg-secondary">
+                                             <div class="w-100  d-flex justify-content-between p-1">
+                                                <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                    <img src=" https://assets.tickertape.in/nav-logos/read_and_share/learn_v2.svg" alt="" width="40" height="40">
+                                                    <span class="text-white fs-6">Learn</span>
+                                                </div>
+                                               <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                    <img src="https://assets.tickertape.in/nav-logos/read_and_share/social_v2.svg" alt="" width="40" height="40">
+                                                    <span class="text-white text-center fs-6">Social</span>
+                                                </div>
+                                                  <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                    <img src="https://assets.tickertape.in/nav-logos/read_and_share/blog_v2.svg" alt="" width="40" height="40">
+                                                    <span class="text-white text-center fs-6">Blog</span>
+                                                </div>
+                                                <div class="d-flex flex-column align-items-center jutify-content-center" >
+                                                    <img src="https://assets.tickertape.in/nav-logos/read_and_share/how_to_v2.svg" alt=""  width="40" height="40">
+                                                    <span class="text-white text-center fs-6">How to's</span>
+                                                </div>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+              </nav>
+
+              <nav class="w-100 p-2 bg-dark" id="navbar2" >
+                <div class="d-flex">
+                  <div class="p-2">
+                    <a href="#" class="fs-4 text-white" id="menu">
+                      <i class="fa-solid fa-bars" id="menu-icon"></i>
+                    </a>
+                  </div>
+                  <div class="w-100 d-flex justify-content-end" >
+                    <form class="d-flex justify-content-end gap-2 w-100" >
+                        <div class="w-100 p-1 d-flex align-items-center justify-content-between gap-2" style="height: 45px; border-radius: 15px;   background-color: #2b2b2b;">
+                            <span><i class="fa-solid fa-magnifying-glass text-white"></i></span>
+                            <input class="w-100" type="text" name="" id=""  placeholder="Search Stocks, Mutual funds, Smallcases, ETS, Etz..">
+                            <button type="button" class="btn bg-dark" class="p-1 "><i class="fa-solid fa-slash text-white"></i></button>
+                         </div>
+                        <button type="button" class="btn bg-white text-dark">Login</button>   
+                        <button type="button" class="btn bg-white text-dark" style="margin-right: 10px;"><i class="fa-solid fa-bell"></i></button>                     
+                    </form>
+                  </div>
+                </div>
+                <div class="w-100 bg-dark" id="menu-link" style=" display: none; border: 2px solid red;">
+                   <ul class="w-100 p-0 ul-links">
+                    <li class="p-2"><a href="" class="text-white fs-5"><i class="fa-solid fa-briefcase"></i> Portfolio</a></li>
+                    <hr class="bg-secondary">
+                    <li class="p-2"><a href="" class="text-white fs-5"><i class="fa-solid fa-ring"></i> Gold</a></li>
+                    <hr class="bg-secondary">
+                    <li class="p-2"><a href="" class="text-white fs-5"><i class="fa-brands fa-screenpal"></i> Screener</a></li>
+                    <hr class="bg-secondary">
+                    <li class="p-2"><a href="" class="text-white fs-5" id="more"><i class="fa-solid fa-sliders"></i> More <i
+                                class="fa-solid fa-caret-down"></i></a></li>
+          
+                   </ul>
+                </div>
+              </nav>
+              <div class="container d-flex gap-2 w-100 p-2 mt wrapnn" >
+               <div class="w-100 d-flex gap-2 justify-content-start wrapnn"  >
+                <div class="p-1 bg-dark d-flex align-items-center" style=" border-radius: 10px;  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                    <a href="" class="text-decoration-none" style="color: rgb(193, 192, 192);"><span>Nifty 50</span> &nbsp; &nbsp;&nbsp;  <span id="trade_value"></span></a>
+                 </div>
+                 <div class="p-1 bg-dark  d-flex align-items-center" style=" border-radius: 10px;  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                  <a href="" class="text-decoration-none" style="color: rgb(193, 192, 192);"><span>SENSEX</span> &nbsp; &nbsp;&nbsp;  <span id="trade_value1"></span></a>
+               </div>
+               </div>
+               <div class="d-flex justify-content-end align-items-center " >
+                <p id="click_week" class="text-primary d-flex align-items-center"><span id="week_month_fun" style="cursor: pointer;">Daily</span> &nbsp;<i class="fa-solid fa-sort"></i></p>
+               </div>
+             </div>
+             <div class="container p-1 w-100" id="main_container1">
+               <div class="w-100 d-flex justify-content-start gap-3 wrapm">
+                   <div class="w-100 p-1 o1" >
+                    <div class="p-2" id="cont1">
+                        <span class="text-secondary fs-2"><b>Change since 21st Thu</b></span>
+                        <p><span class="text-success fs-2"><b>Extreme Fear to</b></span> <span class="text-warning fs-2"><b>Fear</b></span> <span class="text-white bg-secondary 2 rounded-5 fs-2" style="border-radius: 10px;"><i class="fa-solid fa-ellipsis"></i></span></p>
+                     </div>
+                     <div class="p-2" id="cont2" style=" display: none;">
+                         <span class="text-secondary fs-2"><b>Change since 22st Fri</b></span>
+                         <p><span class="text-success fs-2"><b>Extreme Fear to</b></span> <span class="text-warning fs-2"><b>Fear</b></span> <span class="text-white bg-secondary p-1 rounded-5 fs-2" style="border-radius: 10px;"><i class="fa-solid fa-ellipsis"></i></span></p>
+                     </div>
+                     <div class="p-2" id="cont3" style=" display: none;">
+                         <span class="text-secondary fs-2"><b>Change since 25st Mon</b></span>
+                         <p><span class="text-success fs-2"><b>Extreme Fear to</b></span> <span class="text-warning fs-2"><b>Fear</b></span> <span class="text-white bg-secondary p-1 rounded-5 fs-2" style="border-radius: 10px;"><i class="fa-solid fa-ellipsis"></i></span></p>
+                     </div>
+                     <div class="p-2" id="cont4" style=" display: none;">
+                         <span class="text-secondary fs-2"><b>Change since 26st Tue</b></span>
+                         <p><span class="text-warning fs-2"><b>Fear</b></span> <span class="text-white fs-2"><b>to</b></span> <span class="text-warning fs-2"><b>Fear</b></span> <span class="text-white bg-secondary p-1 rounded-5 fs-2" style="border-radius: 10px;"><i class="fa-solid fa-ellipsis"></i></span></p>
+                     </div>
+                     <div class="p-2" id="cont5" style=" display: none;">
+                         <span class="text-secondary fs-2"><b>The Market is in</b></span>
+                         <p><span class="text-warning fs-2"><b> Fear</b></span> <span class="text-white fs-2"><b>Zone</b></span> <span class="text-white bg-secondary p-1 rounded-5 fs-2" style="border-radius: 10px;"><i class="fa-solid fa-ellipsis"></i></span></p>
+                     </div>
+                   </div>
+                   <div class="w-100 p-1 o2" >
+                    <div id="cont_click1" class="p-3 d-flex flex-column align-items-center justify-content-center hover " style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                        <img class="imgnone" src="https://www.tickertape.in/images/mmi/green.svg" alt="">
+                        <span class="none text-success"><i class="fa-solid fa-o"></i></span>
+                        <span class="text-secondary">THU</span>
+                    </div>
+                    <div id="cont_click2" class="p-3 d-flex flex-column align-items-center justify-content-center hover" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                        <img class="imgnone" src="https://www.tickertape.in/images/mmi/green.svg" alt="">
+                        <span class="none text-success"><i class="fa-solid fa-o"></i></span>
+                        <span class="text-secondary">FRI</span>
+                    </div>
+                    <div id="cont_click3" class="p-3 d-flex flex-column align-items-center justify-content-center hover" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                        <img class="imgnone" src="https://www.tickertape.in/images/mmi/green.svg" alt="">
+                        <span class="none text-success"><i class="fa-solid fa-o"></i></span>
+                        <span class="text-secondary">MON</span>
+                    </div>
+                    <div id="cont_click4" class="p-3 d-flex flex-column align-items-center justify-content-center hover" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                        <img class="imgnone" src="https://www.tickertape.in/images/mmi/yellow.svg" alt="">
+                        <span class="none text-warning"><i class="fa-solid fa-o"></i></span>
+                        <span class="text-secondary">TUE</span>
+                    </div>
+                    <div id="cont_click5" class="p-3 d-flex flex-column align-items-center justify-content-center hover" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                        <img class="imgnone" src="https://www.tickertape.in/images/mmi/yellow.svg" alt="">
+                        <span class="none text-warning"><i class="fa-solid fa-o"></i></span>
+                        <span class="text-secondary">TODAY</span>
+                    </div>
+                   </div>
+               </div>
+             </div>
+             <div class="container p-1 w-100" id="main_container2" >
+                <div class="w-100 d-flex justify-content-start gap-3 wrapm">
+                    <div class="w-100 p-1 o1">
+                        <div class="p-2" id="month1">
+                            <span class="text-secondary fs-2"><b>Change since July</b></span>
+                            <p><span class="text-success fs-2"><b>Extreme Greed </b></span><span class="text-white fs-2">to</span> <span class="text-warning fs-2"><b>Fear</b></span> <span class="text-white bg-secondary p-1 rounded-5 fs-2" style="border-radius: 10px;"><i class="fa-solid fa-ellipsis"></i></span></p>
+                         </div>
+                         <div class="p-2" id="month2" style=" display: none;">
+                             <span class="text-secondary fs-2"><b>Change since August</b></span>
+                             <p><span class="text-warning fs-2"><b>Fear </b></span><span class="text-white fs-2">to</span> <span class="text-warning fs-2"><b>Fear</b></span> <span class="text-white bg-secondary p-1 rounded-5 fs-2" style="border-radius: 10px;"><i class="fa-solid fa-ellipsis"></i></span></p>
+                         </div>
+                         <div class="p-2" id="month3" style=" display: none;">
+                             <span class="text-secondary fs-2"><b>Change since September</b></span>
+                             <p><span class="text-warning fs-2"><b>Greed</b></span> <span class="text-white fs-2">to</span> <span class="text-warning fs-2"><b>Fear</b></span> <span class="text-white bg-secondary p-1 rounded-5 fs-2" style="border-radius: 10px;"><i class="fa-solid fa-ellipsis"></i></span></p>
+                         </div>
+                         <div class="p-2" id="month4" style=" display: none;">
+                             <span class="text-secondary fs-2"><b>Change since October</b></span>
+                             <p><span class="text-warning fs-2"><b>Extreme</b></span> <span class="text-white fs-2"><b>to</b></span> <span class="text-warning fs-2"><b>Fear</b></span> <span class="text-white bg-secondary p-1 rounded-5 fs-2" style="border-radius: 10px;"><i class="fa-solid fa-ellipsis"></i></span></p>
+                         </div>
+                         <div class="p-2" id="month5" style=" display: none;">
+                             <span class="text-secondary fs-2"><b>The Market is in</b></span>
+                             <p><span class="text-warning fs-2"><b> Fear</b></span> <span class="text-white fs-2"><b>Zone</b></span> <span class="text-white bg-secondary p-1 rounded-5 fs-2" style="border-radius: 10px;"><i class="fa-solid fa-ellipsis"></i></span></p>
+                         </div>
+                    </div>
+                    <div class="w-100 p-1 o2" >
+                        <div id="month_click1" class="p-3 d-flex flex-column align-items-center justify-content-center hover " style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                            <img class="imgnone" src="https://www.tickertape.in/images/mmi/red.svg" alt="">
+                            <span class="none text-danger"><i class="fa-solid fa-o"></i></span>
+                            <span class="text-secondary">JUL</span>
+                        </div>
+                        <div id="month_click2" class="p-3 d-flex flex-column align-items-center justify-content-center hover" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                            <img class="imgnone" src="https://www.tickertape.in/images/mmi/yellow.svg" alt="">
+                            <span class="none text-warning"><i class="fa-solid fa-o"></i></span>
+                            <span class="text-secondary">AUG</span>
+                        </div>
+                        <div id="month_click3" class="p-3 d-flex flex-column align-items-center justify-content-center hover" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                            <img class="imgnone" src="https://www.tickertape.in/images/mmi/orange.svg" alt="">
+                            <span class="none text-danger"><i class="fa-solid fa-o"></i></span>
+                            <span class="text-secondary">SEP</span>
+                        </div>
+                        <div id="month_click4" class="p-3 d-flex flex-column align-items-center justify-content-center hover" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                            <img class="imgnone" src="https://www.tickertape.in/images/mmi/green.svg" alt="">
+                            <span class="none text-success"><i class="fa-solid fa-o"></i></span>
+                            <span class="text-secondary">OCT</span>
+                        </div>
+                        <div id="month_click5" class="p-3 d-flex flex-column align-items-center justify-content-center hover" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                            <img class="imgnone" src="	https://www.tickertape.in/images/mmi/yellow.svg" alt="">
+                            <span class="none text-warning"><i class="fa-solid fa-o"></i></span>
+                            <span class="text-secondary">TODAY</span>
+                        </div>
+                    </div>
+                </div>
+             </div>
+              </div>
+           </div>
+          </div>
+        </div>
+        
+       <div class="container mt-3">
+        <div class="row">
+            <div class="col d-flex gap-3 wrapm">
+                  <div class="w-100 p-1 shadow " style="border-radius: 15px;">
+                    <div class="spinner-border" id="loading" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div class="alert alert-secondary" id="error" role="alert">
+                      <p id="error_msg"></p>
+                      </div>
+                  <!-- Tab buttons -->
+                  <ul class="nav nav-tabs d-flex gap-5 justify-content-between" id="myTabs" role="tablist">
+                    <li class="nav-item " role="presentation">
+                      <a class="nav-link active" id="tab1-tab" data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Broad Based</a>
+                    </li>
+                    <li class="nav-item " role="presentation">
+                      <a class="nav-link" id="tab2-tab" data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Sectoral</a>
+                    </li>
+                    <li class="nav-item " role="presentation">
+                      <a class="nav-link" id="tab3-tab" data-bs-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Gold & Forex</a>
+                    </li>
+                  </ul>
+                
+                  <!-- Tab content -->
+                  <div class="tab-content" id="myTabsContent">
+                    <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                       
+                          <div class="w-100 p-1 d-flex justify-content-end" >
+                            <a href="" id="filterToggle"  class="text-decoration-none">High <i class="fa-solid fa-sort"></i></a>
+                          </div>
+                          <table class="table">
+                            <tbody id="fetch_data">
+                            
+                            </tbody>
+                          </table>
+                    </div>
+                    <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                        <div class="w-100 p-1 d-flex justify-content-end" >
+                            <a href="" id="filterToggle2"  class="text-decoration-none">High <i class="fa-solid fa-sort"></i></a>
+                          </div>
+                          <table class="table">
+                            <tbody id="fetch_datasectoral">
+                            
+                            </tbody>
+                          </table>
+                    </div>
+                    <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                        <div class="w-100 p-1 d-flex justify-content-end" >
+                            <a href="" id="filterToggle3"  class="text-decoration-none">High <i class="fa-solid fa-sort"></i></a>
+                          </div>
+                        <table class="table">
+                            <tbody id="fetch_datacomodities">
+                            
+                            </tbody>
+                          </table>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="w-100 p-1">
+                    <div class="w-100 p-2" style=" background-color: rgb(233, 233, 233); border-radius: 10px;">
+                       <div class="w-100 p-1 bg-white" style="  border-radius: 10px;">
+                        <div class="w-100 d-flex justify-content-between p-1" >
+                            <p>Top Gainers</p>
+                            <a href="" class="text-decoration-none" ><span id="select_option">Large cap</span> <span> <i class="fa-solid fa-sort"></i></span></a>
+                           </div>
+                           <div class="box-container">
+                            <div id="large" class="w-100 p-1 fade active">
+                                <table class="table">
+                                    <tbody id="large_data">
+                
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="mid" class="w-100 p-1 fade hidden">
+                                <table class="table">
+                                    <tbody id="mid_data">
+                
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="small" class="w-100 p-1 fade hidden">
+                                <table class="table">
+                                    <tbody id="small_data">
+                
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="market" class="w-100 p-1 fade hidden">
+                                <table class="table">
+                                    <tbody id="market_data">
+                
+                                    </tbody>
+                                </table>
+                            </div>
+                           </div>
+                           
+                       </div>
+                      
+                    </div>
+                  </div>
+            </div>
+          </div>
+       </div>
+      </div>
+      <script src="javascript/j1.js"></script>
+      <script src="javascript/table.js"></script>
+        
+      <script>
+          const menu = document.getElementById('menu');
+const menuLink = document.getElementById('menu-link');
+const menuIcon = document.getElementById('menu-icon');
+menuLink.style.display = 'none';
+
+menu.addEventListener('click', function(event) {
+  event.preventDefault(); 
+
+  if (menuLink.style.display === 'none' || menuLink.style.display === '') {
+    menuLink.style.display = 'block';
+    menuIcon.classList.remove('fa-bars');
+    menuIcon.classList.add('fa-times'); 
+  } else {
+    menuLink.style.display = 'none';
+    menuIcon.classList.remove('fa-times'); 
+    menuIcon.classList.add('fa-bars'); 
+  }
+});
+
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

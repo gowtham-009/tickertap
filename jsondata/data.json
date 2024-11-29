@@ -1,0 +1,282 @@
+{
+    "broad_based": [
+      {
+        "id":1,
+        "name": "NIFTY Next 50",
+        "sec": "Smallcap",
+        "price1": "2893.04",
+        "perc":" 0.30",
+        "data_points":[1,2,1,3,1,4,1,5]
+      
+      },
+      {
+        "id":2,
+        "name": "NIFTY 100",
+        "sec": "Smallcap",
+        "price1": "2500.01",
+        "perc": "0.15",
+        "data_points":[1,2,1,3,1,4,1,5]
+      
+      },
+      {
+        "id":3,
+        "name": "NIFTY",
+        "sec": "Midcap",
+        "price1": "2000.03",
+        "perc": "0.20",
+        "data_points":[1,2,1,3,1,4,1,5]
+       
+      },
+      {
+        "id":4,
+        "name": "NIFTY",
+        "sec": "Midsmall",
+        "price1": "1500.63",
+        "perc": "-0.25",
+        "data_points":[1,2,1,3,1,4,1,5,1]   
+         },
+      {
+        "id":5,
+        "name": "NIFTY",
+        "sec": "Largemid",
+        "price1": "7863.25",
+        "perc": "0.10",
+         "data_points":[1,2,1,3,1,4,1,5]      
+      },
+      {
+        "id":6,
+        "name": "NIFTY 500",
+        "sec": "Smallcap",
+        "price1": "1254.69",
+        "perc": "-0.50",
+        "data_points":[1,2,1,3,1,4,1,5,1]        
+      },
+      {
+        "id":7,
+        "name": "NIFTY",
+        "sec": "Largecap",
+        "price1": "15478.36",
+        "perc": "-0.40",
+        "data_points":[1,2,1,3,1,4,1,5,1]        
+      },
+      {
+        "id":8,
+        "name": "NIFTY",
+        "sec": "Smallcap",
+        "price1":" 98743.25",
+        "perc": "-0.55",
+        "data_points":[1,2,1,3,1,4,1,5,1]        
+      }
+    ],
+    "sectoral": [
+      {
+        "id":1,
+        "name": "NIFTY PSU",
+        "sec": "Bank",
+        "price1": "2893.04",
+        "perc": "0.25",
+         "data_points":[1,2,1,3,1,4,1,5]       
+      },
+      {
+        "id":2,
+        "name": "NIFTY",
+        "sec": "Reality",
+        "price1": "2500.01",
+        "perc": "0.18",
+         "data_points":[1,2,1,3,1,4,1,5]       
+      },
+      {
+        "id":3,
+        "name": "NIFTY",
+        "sec": "Media",
+        "price1": "2000.03",
+        "perc": "0.22",
+         "data_points":[1,2,1,3,1,4,1,5]       
+      },
+      {
+        "id":4,
+        "name": "NIFTY",
+        "sec": "Metal",
+        "price1": "1500.63",
+        "perc": "-0.17",
+        "data_points":[1,2,1,3,1,4,1,5,1]        
+      },
+      {
+        "id":5,
+        "name": "NIFTY",
+        "sec": "FMCG",
+        "price1": "7863.25",
+        "perc": "0.35",
+         "data_points":[1,2,1,3,1,4,1,5]       
+      },
+      {
+        "id":6,
+        "name": "NIFTY",
+        "sec": "Bank",
+        "price1": "1254.69",
+        "perc":" -0.45",
+        "data_points":[1,2,1,3,1,4,1,5,1]        
+      },
+      {
+        "id":7,
+        "name": "NIFTY",
+        "sec": "Financial",
+        "price1": "15478.36",
+        "perc": "-0.50",
+        "data_points":[1,2,1,3,1,4,1,5,1]        
+      },
+      {
+        "id":8,
+        "name": "NIFTY",
+        "sec": "Pharma",
+        "price1": "98743.25",
+        "perc": "-0.60",
+        "data_points":[1,2,1,3,1,4,1,5,1]        
+      },
+      {
+        "id":9,
+        "name": "NIFTY",
+        "sec": "Auto",
+        "price1": "98743.25",
+        "perc": "-0.30",
+        "data_points":[1,2,1,3,1,4,1,5,1]        
+      }
+    ],
+    "commodities": [
+      {
+        "id":1,
+        "name": "USD/INR",
+        "sec": "Bank",
+        "price1": "2893.04",
+        "perc": "0.28",
+         "data_points":[1,2,1,3,1,4,1,5]       
+      },
+      {
+        "id":2,
+        "name": "GOLD",
+        "sec": "Reality",
+        "price1":" 2500.01",
+        "perc": "0.12",
+         "data_points":[1,2,1,3,1,4,1,5]       
+      },
+      {
+        "id":3,
+        "name": "SILVER",
+        "sec": "Media",
+        "price1": "2000.03",
+        "perc": "0.14",
+         "data_points":[1,2,1,3,1,4,1,5]      },
+      {
+        "id":4,
+        "name": "BRASS",
+        "sec": "Metal",
+        "price1": "1500.63",
+        "perc": "-0.21",
+        "data_points":[1,2,1,3,1,4,1,5,1]        
+      }
+    ],
+    "largecap":[
+        {
+            "name":"Adani Green...",
+            "cap_name":"ADANIGREEN",
+            "price":"₹1.087.20",
+            "upgrade":"10.00%",
+            "logo":"https://assets.tickertape.in/stock-logos/ADNA.png"
+        },
+        {
+            "name":"Adani Power Ltd",
+            "cap_name":"ADANIPOWER",
+            "price":"₹568.20",
+            "upgrade":"8.73%",
+            "logo":"https://assets.tickertape.in/stock-logos/ADNA.png"
+        },
+        {
+            "name":"Bajaj Housing",
+            "cap_name":"BAJAJHFL",
+            "price":"₹136.90",
+            "upgrade":"3.72%",
+            "logo":"https://assets.tickertape.in/stock-logos/ADNA.png"
+        },
+        {
+            "name":"Indian Overseas",
+            "cap_name":"IOB",
+            "price":"₹54.63",
+            "upgrade":"4.25%",
+            "logo":" https://assets.tickertape.in/stock-logos/IOBK.png"
+        }
+    ],
+    "mid_cap":[
+        {
+            "name":"Adani Total Gas...",
+            "cap_name":"ATGL",
+            "price":"₹768.20",
+            "upgrade":"8.73%",
+            "logo":"https://assets.tickertape.in/stock-logos/ADNA.png"
+        },
+        {
+            "name":"Adani Energy ...",
+            "cap_name":"ADANIESOL",
+            "price":"₹768.20",
+            "upgrade":"8.73%",
+            "logo":"https://assets.tickertape.in/stock-logos/ADNA.png"
+        },
+        {
+            "name":"Tube Envesment ...",
+            "cap_name":"TIINDIA",
+            "price":"₹768.20",
+            "upgrade":"8.73%",
+            "logo":"https://assets.tickertape.in/stock-logos/TBEI.png"
+        },
+        {
+            "name":"Solar Industries ...",
+            "cap_name":"SOLARINDS",
+            "price":"₹768.20",
+            "upgrade":"8.73%",
+            "logo":"https://assets.tickertape.in/stock-logos/SLIN.png"
+        }
+    ],
+    "smallcap":[
+        {
+            "name":"Aarti Surfactant...",
+            "cap_name":"AARTISURF",
+            "price":"₹768.20",
+            "upgrade":"8.73%",
+            "logo":"https://assets.tickertape.in/stock-logos/AARU.png"
+        },
+        {
+            "name":"Soma Textiles",
+            "cap_name":"SOMATEX",
+            "price":"₹768.20",
+            "upgrade":"8.73%",
+            "logo":"https://assets.tickertape.in/stock-logos/SOMA.png"
+        }
+
+
+    ],
+    "market":[
+        {
+            "name":"Aarti Surfactant...",
+            "cap_name":"AARTISURF",
+            "price":"₹768.20",
+            "upgrade":"8.73%",
+            "logo":"https://assets.tickertape.in/stock-logos/AARU.png"
+        },
+        {
+            "name":"Soma Textiles",
+            "cap_name":"SOMATEX",
+            "price":"₹768.20",
+            "upgrade":"8.73%",
+            "logo":"https://assets.tickertape.in/stock-logos/SOMA.png"
+        },
+        {
+            "name":"Indian Overseas",
+            "cap_name":"IOB",
+            "price":"₹54.63",
+            "upgrade":"4.25%",
+            "logo":" https://assets.tickertape.in/stock-logos/IOBK.png"
+        }
+
+    ]
+   
+  }
+  

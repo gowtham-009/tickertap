@@ -1,0 +1,132 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+a{
+    text-decoration: none !important;
+}
+.ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.ul li{
+    list-style-type: none;
+    padding: 1%;
+    border-radius: 10px;
+}
+.ul li a{
+    text-decoration: none;
+}
+.ul li:hover{
+    background-color: rgb(89, 89, 89);
+}
+
+#more_menu{
+    position: absolute;
+    top:108%;
+    left: 45%;
+    height: auto;
+    transition: 0.5s;
+}
+.wrap{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+   gap: 20px;
+
+}
+.red {
+    color: red;
+}
+.mt{
+    margin-top: 5%;
+}
+.hover:hover{
+    cursor: pointer;
+    background-color: rgb(64, 64, 64);
+}
+
+.hidden {
+    display: none;
+}
+#navbar2{
+    position: relative;
+    display: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#menu-link{
+    position: absolute;
+    left: 0%;
+    width: 100% !important;
+}
+input{
+    background-color: #2b2b2b;
+   border: none;
+   outline: none;
+   background-color: transparent;
+   color: white;
+}
+.o2{
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+.none{
+    display: none;
+}
+
+.nav-tabs .nav-link {
+    border-radius: 15px; /* Rounded corners for tabs */
+  }
+
+  .nav-tabs .nav-link.active {
+    background-color: black; /* Black background for active tab */
+    color: white !important; /* White text for active tab */
+  }
+
+  .nav-tabs .nav-link {
+    color: #000; /* Default color for tab text */
+  }
+  .shadow{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+@media(max-width:992px){
+    #navbar1{
+        display: none;
+    }
+    #navbar2{
+        display: block;
+    }
+    .mt{
+        margin-top: 0%;
+    }
+    .wrapm{
+        flex-wrap: wrap !important;
+    }
+    .o1{
+        order: 2;
+    }
+    .o2{
+        order: 1;
+        justify-content: center;
+    }
+    .imgnone{
+        display: none;
+    }
+    .none{
+        display: block;
+    }
+    .wrapnn{
+        flex-direction: column !important;
+        align-items:center !important;
+        justify-content: center !important;
+    }
+}
+
